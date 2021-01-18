@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /*Ini: to put children in the center of the Y axis*/
+  align-items: center;
+  height: 100vh;
+  /*End: to put children in the center of the Y axis*/
+}
+
+.col {
+  border-style: dashed;
+}
+
+img {
+  height: 200px;
+}

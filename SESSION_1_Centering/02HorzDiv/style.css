@@ -1,0 +1,13 @@
+.container {
+  font-size: 15x;
+  font-family: comic-sans;
+}
+
+.centeredDiv {
+  margin: 0 auto;
+}
+
+.realCenteredDiv {
+  margin: 0 auto;
+  width: 200px;
+}

@@ -1,0 +1,19 @@
+.container {
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+#img1 {
+  /*position: static;*/
+}
+
+#img2 {
+  position: static;
+  top: 50px;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+}

@@ -1,0 +1,21 @@
+.container {
+  min-height: 200vh;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+#img1 {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+#img2 {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}

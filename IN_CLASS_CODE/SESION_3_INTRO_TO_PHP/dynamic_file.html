@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello...</title>
+
+    <style>
+        body {
+            background-color: #FFD131;
+        }
+
+        div {
+            background-color: #ffe99b;
+            padding: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            max-width: 500px;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 3em;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <p>Hello</p>
+</div>
+
+<script>
+    /*
+    small dynamic script!
+     */
+    let message = "What's up?";
+    let textElement = document.createElement("p");
+    textElement.textContent = message;
+    let parentElement = document.createElement("div")
+    parentElement.appendChild(textElement);
+    document.body.appendChild(parentElement);
+</script>
+</body>
+
+</html>

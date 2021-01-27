@@ -39,9 +39,10 @@ $name = $email = $subject = $message = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Validate user name
+    // Validate user name -> what is the return type here? -> empty? [
     if (empty($_POST["name"])) {
-        $nameErr = "Please enter your name.";
+        // empty
+        $nameErr = " you need this! Please enter your name.";
     } else {
         $name = filterName($_POST["name"]);
         if ($name == FALSE) {
@@ -60,10 +61,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validate message subject
-    if (empty($_POST["subject"])) {
+    if (empty($_POST["subjectYo"])) {
         $subject = "";
     } else {
-        $subject = filterString($_POST["subject"]);
+        $subject = filterString($_POST["subjectYo"]);
     }
 
     // Validate user comment
@@ -104,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Contact Us</h2>
     <p>Please fill in this form and send us.</p>
-    <form action="contact.php" method="post">
+    <form action="contact.php" method="post"> <!-- post array ! post: name: {}, email: {}, message: {}, subjectYo {}, message1-->
         <p>
             <label for="inputName">Name:<sup>*</sup></label>
             <input type="text" name="name" id="inputName" value="<?php echo $name; ?>">
@@ -117,13 +118,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
         <p>
             <label for="inputSubject">Subject:</label>
-            <input type="text" name="subject" id="inputSubject" value="<?php echo $subject; ?>">
+            <input type="text" name="subjectYo" id="inputSubject" value="<?php echo $subject; ?>">
         </p>
         <p>
             <label for="inputComment">Message:<sup>*</sup></label>
             <textarea name="message" id="inputComment" rows="5" cols="30"><?php echo $message; ?></textarea>
             <span class="error"><?php echo $messageErr; ?></span>
         </p>
+        <p>
+            <label for="inputComment">Message:<sup>*</sup></label>
+            <textarea name="message1" id="inputComment" rows="5" cols="30"><?php echo $message; ?></textarea>
+            <span class="error"><?php echo $messageErr; ?></span>
+        </p>
+
         <input type="submit" value="Send">
         <input type="reset" value="Reset">
     </form>

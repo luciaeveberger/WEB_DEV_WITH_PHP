@@ -1,8 +1,23 @@
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
 <?php
-  # This is our first basic PHP web service to say hello given a name query parameter!
-  header("Content-type: text/plain");
-  
-  # We'll learn Wednesday how to check whether $_GET parameters are set for error-handling!
-  $name = $_GET["name"];
-  echo "Hello $name!";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    # htmlspecialchars
+    echo $name;
+  }
+}
 ?>
+
+</body>
+</html>

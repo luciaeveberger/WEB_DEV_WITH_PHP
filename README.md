@@ -10,4 +10,4 @@ Code should be run from the `htdocs` folder in the `XAMP` setup. We will install
 # Our class schedule
 ![PHP_6_weeks.PNG](PHP_6_weeks.PNG)
 
-Our first six weeks schedule.
+Our first twelve weeks schedule.
